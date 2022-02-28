@@ -8,7 +8,7 @@ from schemas.animal import animalEntity, animalsEntity, serializeDict, serialize
 animalRoute = APIRouter()
 
 @animalRoute.post('/otarie')
-async def create_user(otarie: BaieDesOtaries):
+async def create_otarie(otarie: BaieDesOtaries):
     db.get_collection('baie-des-otaries').insert_one(dict(otarie))
     return serializeList(db.get_collection('baie-des-otaries').find())
 

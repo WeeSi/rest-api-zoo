@@ -1,8 +1,21 @@
 def animalEntity(item) -> dict:
+
+    if hasattr(item, 'sexe'):
+        print('has')
+    else:
+        item["sexe"] = ""
+
+    if hasattr(item, 'taille'):
+        print('has')
+    else:
+        item["taille"] = ""
+
     return {
         "_id": str(item['_id']),
         "type": str(item['type']),
         "color": str(item['color']),
+        "sexe": str(item['sexe']),
+        "taille": str(item['taille'])
     }
 
 

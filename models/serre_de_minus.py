@@ -1,7 +1,7 @@
 from pydantic import BaseModel
 
 
-class BaieDesOtaries(BaseModel):
+class SerreDeMinus(BaseModel):
     type: str
     color: str
     taille: str
