@@ -6,6 +6,7 @@ from config.db import db
 
 from schemas.animal import animalEntity, animalsEntity, serializeDict, serializeList
 animalRoute = APIRouter()
+animalRoute.tags = ["Animal"]
 
 @animalRoute.post('/otarie')
 async def create_otarie(otarie: BaieDesOtaries):

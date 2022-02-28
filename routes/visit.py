@@ -6,6 +6,7 @@ from config.db import db
 
 from schemas.visit import visitsEntity, visitEntity, serializeDict, serializeList
 visitRoute = APIRouter()
+visitRoute.tags = ["Visit"]
 
 @visitRoute.post('/visit')
 async def create_visit(visit: Visit):

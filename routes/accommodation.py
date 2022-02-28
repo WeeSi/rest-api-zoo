@@ -6,6 +6,7 @@ from config.db import db
 
 from schemas.accommodation import accoEntity, accosEntity, serializeDict, serializeList
 accoRoute = APIRouter()
+accoRoute.tags = ["Accommodation"]
 
 @accoRoute.post('/acc')
 async def create_acco(acc: Accommodation):
